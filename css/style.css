@@ -1,0 +1,298 @@
+:root {
+    --silver: rgba(0, 0, 0, 0.6);
+    --blue: #42a5f5;
+    --light-silver: rgba(192, 192, 192, .5);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+i {
+    color: var(--silver);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100vw;
+}
+
+header {
+    width: 100%;
+    padding: 1em;
+    border-bottom: solid 1px var(--light-silver);
+    display: flex;
+    justify-content: space-between;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header .header-right {
+    column-gap: 1em;
+}
+
+#search {
+    text-align: center;
+}
+
+header div form{
+    display: flex;
+    align-items: center;
+    column-gap: .5em;
+}
+
+header form input {
+    border: solid 1px var(--blue);
+    border-radius: 20em;
+    padding: .5em;
+    outline: none;
+}
+
+header form button i {
+    font-size: 2em;
+}
+
+header form button  {
+    border: none;
+    background: none;
+    
+}
+
+header form button:hover i {
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+header div .tagPage {
+    padding: .5em 1em;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+
+}
+
+header .tagPage:nth-of-type(1) {
+    background: #f1c40f;
+    border: solid 1px #f1c40f;
+}
+
+header .tagPage:nth-of-type(2) {
+    background: #16a085;
+    border: solid 1px #16a085;
+}
+
+header .tagPage:nth-of-type(3) {
+    background: #8e44ad;
+    border: solid 1px #8e44ad;
+}
+
+header .tagPage:nth-of-type(4) {
+    background: #2980b9;
+    border: solid 1px #2980b9;
+}
+
+header .tagPage:nth-of-type(5) {
+    background: #d35400;
+    border: solid 1px #d35400;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 4fr;
+    padding-bottom: .5em;
+}
+
+.container .col {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    row-gap: 1em;
+}
+
+a:hover {
+    color: var(--blue);
+}
+
+.row1 {
+    display: flex;
+    column-gap: 1em;
+    border-bottom: solid 1px silver;
+    padding: .58em;
+    align-items: center;
+}
+
+.row1 i {
+    font-size: 1.5em;
+}
+
+.row1 i:hover {
+    color: var(--blue);
+}
+
+.col-1 .row1 {
+    padding: .945em;
+}
+
+select {
+    border: solid 1px var(--blue);
+    outline: none;
+}
+
+.row-pwd {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pwd {
+    color: var(--blue);
+    padding: .46em;
+    /* background: salmon; */
+    border: inset 1px var(--silver);
+    /* border-radius: 32em; */
+}
+
+.row-2 {
+    overflow-x: scroll;
+    height: 100vh;
+}
+
+.file-list {
+    margin-left: 1em;
+}
+
+.foldList {
+    display: flex;
+    flex-direction: column;
+    /* row-gap: .5em; */
+    overflow: scroll;
+    height: 100vh;
+    margin-bottom: 3em;
+}
+
+.foldList .file-list {
+    border-bottom: solid 1px var(--light-silver);
+    padding: .3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foldList .file-list .folder {
+    display: flex;
+    width: 100%;
+    column-gap: .5em;
+    justify-content: space-between;
+}
+
+
+.foldList .file-list:first-of-type {
+    border-top: solid 1px rgba(192, 192, 192, .5);
+
+}
+
+.file-list-side {
+    border-left: solid 1px silver;
+    display: flex;
+    flex-direction: column;
+    margin: .5em 1em;
+}
+
+.file {
+    margin-left: 1em;
+}
+
+.line {
+    display: flex;
+    column-gap: .3em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.folder-crumb {
+    cursor: pointer;
+}
+
+.file-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+
+}
+
+.file-container::-webkit-scrollbar {
+    display: none;
+}
+
+.after-select {
+    display: none;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    height: 100%;
+}
+
+.foldList {
+    overflow-x: auto;
+}
+
+.foldList i {
+    margin-right: .3em;
+}
+
+.foldList::-webkit-scrollbar {
+    display: none;
+}
+
+.screen {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: scroll;
+    padding-bottom: 3em;
+    padding-right: 3em;
+    position: relative;
+}
+
+#screen {
+    height: 80vh;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    color: red;
+    display: none;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.checkbox {
+    margin-right: .4em;
+}
+
+.size,
+.time {
+    font-size: 12px;
+    color: var(--silver);
+}
